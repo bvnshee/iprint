@@ -162,4 +162,33 @@
       }
     }
   }
+  &__second {
+    margin-top: 170px;
+    &__images {
+      display: flex;
+      position: relative;
+    }
+    &-block {
+      &:nth-child(1) {
+        max-width: 330px;
+        height: 390px;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        max-width: 307px;
+        height: 370px;
+        left: 19%;
+        top: 22%;
+      }
+      &:nth-child(3) {
+        max-width: 278px;
+        height: 340px;
+        margin-top: 16px;
+        margin-left: 192px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
