@@ -1,0 +1,25 @@
+* {
+  font-family: "Aeroport", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration-line: none;
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1410px;
+  position: relative;
+  margin: 0 auto;
+}
+
+@import "blocks/header";
+@import "blocks/promo";
+@import "blocks/subheader";
+@import "blocks/services";
