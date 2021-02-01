@@ -52,6 +52,20 @@
   width: 44px;
   outline: none;
   height: 44px;
+  transition: 0.4s;
+  .left {
+    path {
+      transition: 0.4s;
+    }
+  }
+  &:hover {
+    border-color: #de2627;
+    .left {
+      path {
+        fill: #de2627;
+      }
+    }
+  }
 }
 [data-controls="next"] {
   position: absolute;
@@ -64,6 +78,23 @@
   width: 44px;
   outline: none;
   height: 44px;
+  transition: 0.3s;
+  &:hover {
+    border-color: #de2627;
+  }
+  .right {
+    path {
+      transition: 0.4s;
+    }
+  }
+  &:hover {
+    border-color: #de2627;
+    .right {
+      path {
+        fill: #de2627;
+      }
+    }
+  }
 }
 .tns-nav {
   position: absolute;
@@ -75,6 +106,7 @@
     outline: none;
     transition: 0.4s ease-in;
   }
+
   button {
     outline: none;
     width: 20px;

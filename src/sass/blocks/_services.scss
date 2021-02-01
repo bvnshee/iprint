@@ -1,0 +1,165 @@
+.services {
+  &__title {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 44px;
+    color: #453c3c;
+    margin-top: 60px;
+  }
+  &__box {
+    display: flex;
+  }
+  &__tabs {
+    margin-top: 35px;
+    min-width: 330px;
+    max-width: 330px;
+    height: 720px;
+    background: #f7f8fa;
+    border-radius: 2px;
+    padding: 26px 50px 42px 25px;
+    transition: 0.3s ease-in;
+    box-shadow: 5px 0 10px 0 rgba(96, 96, 96, 0.2);
+    &-item {
+      display: flex;
+      margin-top: 15px;
+      align-items: center;
+      transition: 0.2s;
+      width: fit-content;
+      cursor: pointer;
+      &_active {
+        li {
+          color: #de2627 !important;
+        }
+        path {
+          fill: #de2627;
+        }
+        transform: scale(1.1);
+      }
+      &:hover {
+        transform: scale(1.1);
+        li {
+          color: #de2627;
+        }
+        path {
+          fill: #de2627;
+        }
+      }
+      &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 40px;
+        height: 40px;
+        background: #ffffff;
+        border-radius: 50%;
+        box-shadow: 2px 0 5px 0 rgba(96, 96, 96, 0.3);
+        path {
+          transition: 0.2s;
+        }
+      }
+      li {
+        margin-left: 20px;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 25px;
+        color: #453c3c;
+        text-decoration: none;
+      }
+    }
+  }
+  &__inside {
+    margin-top: 35px;
+    margin-left: 90px;
+    &-item {
+      display: none;
+      opacity: 1;
+      animation: FadeIn 0.4s ease-in;
+      @keyframes FadeIn {
+        0% {
+          opacity: 0;
+          transform: scale(1.1);
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      &_active {
+        display: block;
+      }
+      &__text {
+        h3 {
+          font-weight: 500;
+          font-size: 30px;
+          line-height: 41px;
+          color: #453c3c;
+        }
+        span {
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 140%;
+          color: #989898;
+          margin: 24px 0 51px 0;
+          display: block;
+        }
+      }
+      &__content {
+        position: relative;
+      }
+      &__checkbox {
+        h3 {
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 27px;
+          color: #de2627;
+        }
+      }
+      &__element {
+        margin-top: 18px;
+        -webkit-appearance: none;
+        border: 1px solid #de2627;
+        padding: 5px;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        transition: 0.2s;
+        &:checked {
+          background: #de2627;
+          border: 1px solid #de2627;
+        }
+        &:checked:after {
+          content: "\2714";
+          font-size: 10px;
+          position: absolute;
+          bottom: -2px;
+          left: 1px;
+          color: #fff;
+        }
+      }
+      .checkbox {
+        span {
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 25px;
+          color: #453c3c;
+          display: inline;
+          margin-left: 5px;
+        }
+      }
+      &__big {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+      }
+      &__images {
+        display: flex;
+        z-index: 10;
+        margin-top: 50px;
+        .margin {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}
