@@ -1,0 +1,31 @@
+.developers {
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  padding: 15px 0 15px 0;
+  &__first {
+    span {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 23px;
+      color: #453c3c;
+    }
+  }
+  &__second {
+    display: flex;
+    span {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 23px;
+      color: #453c3c;
+    }
+    p {
+      margin-left: 5px;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 23px;
+      color: #de2627;
+    }
+  }
+}

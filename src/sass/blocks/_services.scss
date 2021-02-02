@@ -164,6 +164,7 @@
   }
   &__second {
     margin-top: 170px;
+    display: flex;
     &__images {
       display: flex;
       position: relative;
@@ -171,17 +172,19 @@
     &-block {
       &:nth-child(1) {
         max-width: 330px;
+        min-width: 330px;
         height: 390px;
       }
       &:nth-child(2) {
         position: absolute;
         max-width: 307px;
         height: 370px;
-        left: 19%;
+        left: 35%;
         top: 22%;
       }
       &:nth-child(3) {
         max-width: 278px;
+        min-width: 278px;
         height: 340px;
         margin-top: 16px;
         margin-left: 192px;
@@ -189,6 +192,61 @@
       img {
         width: 100%;
       }
+    }
+    &__questions {
+      margin-left: 185px;
+      h3 {
+        font-weight: bold;
+        font-size: 30px;
+        color: #453c3c;
+      }
+      span {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 120%;
+        color: #989898;
+        margin-top: 15px;
+        display: block;
+      }
+    }
+    &__inputs {
+      margin-top: 53px;
+      input {
+        width: 420px;
+        height: 50px;
+        background: #f2f3f5;
+        border-radius: 6px;
+        border: none;
+        padding: 13px 0 12px 22px;
+        outline: none;
+        font-weight: normal;
+        font-size: 18px;
+        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
+        &:nth-child(2) {
+          margin-top: 20px;
+        }
+        &::placeholder {
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 25px;
+          color: #989898;
+        }
+      }
+    }
+    button {
+      width: 420px;
+      height: 50px;
+      background: #de2627;
+      border-radius: 6px;
+      border: none;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 25px;
+      color: #ffffff;
+      margin-top: 30px;
+      box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
+      outline: none;
+      cursor: pointer;
     }
   }
 }
