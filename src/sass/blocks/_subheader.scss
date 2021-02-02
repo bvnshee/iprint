@@ -2,11 +2,13 @@
   .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 100%;
   }
   height: 60px;
   box-shadow: 0 4px 6px rgba(96, 96, 96, 0.1);
-  padding: 18px 0;
   &__list {
+    height: 100%;
     display: flex;
     transform: translateX(-20px);
     a {
@@ -20,14 +22,18 @@
       line-height: 25px;
       color: #453c3c;
       text-decoration: none;
-      &:nth-child(1) {
-        margin-left: 0;
-      }
+      margin-left: 2px;
       transition: 0.2s;
       &:hover {
         background-color: #de2627;
         color: #fff;
+        font-weight: 300;
       }
+    }
+    .active {
+      background-color: #de2627;
+      color: #fff;
+      font-weight: 300;
     }
   }
   &__call {

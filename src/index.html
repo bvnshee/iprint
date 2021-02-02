@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/style.min.css" />
     <title>iPrint</title>
   </head>
+
   <body>
     <header class="header">
       <div class="container">
@@ -161,8 +162,10 @@
     <section class="subheader">
       <div class="container">
         <ul class="subheader__list">
-          <a href="#"> <li>О компании</li> </a>
-          <a href="#"> <li>Услуги</li> </a
+          <a href="about_company.html">
+            <li>О компании</li>
+          </a>
+          <a href="services_page.html"> <li>Услуги</li> </a
           ><a href="#"> <li>Партнеры</li> </a
           ><a href="#"> <li>Отзывы</li> </a
           ><a href="#">
@@ -175,6 +178,7 @@
         </a>
       </div>
     </section>
+
     <section class="services">
       <div class="container">
         <div class="services__title">
@@ -1506,7 +1510,16 @@
               <a href="mailto:info@iprint.uz">info@iprint.uz</a>
             </div>
           </div>
-          <div id="map"></div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d749.0280919505025!2d69.33480120511388!3d41.328169857603065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef4f7c4ab4293%3A0xd683c5d2bd485a2d!2zMTBhINCn0YPRgdGCINGD0LsuLCDQotCw0YjQutC10L3RgiAxMDAwNzcsINCj0LfQsdC10LrQuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1612264649333!5m2!1sru!2s"
+            width="303"
+            height="205"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
         </div>
       </div>
     </footer>
@@ -1521,10 +1534,6 @@
         </div>
       </div>
     </section>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
-      defer
-    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="js/script.js"></script>
   </body>
