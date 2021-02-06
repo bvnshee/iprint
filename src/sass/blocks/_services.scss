@@ -105,8 +105,11 @@
       }
       &__content {
         position: relative;
+        display: flex;
+        justify-content: space-between;
       }
       &__checkbox {
+        max-width: 250px;
         h3 {
           font-weight: normal;
           font-size: 20px;
@@ -148,17 +151,25 @@
         }
       }
       &__big {
-        position: absolute;
-        top: 0;
-        right: 0;
+        max-width: 530px;
         z-index: -1;
+        img {
+          width: 100%;
+        }
       }
       &__images {
         display: flex;
         z-index: 10;
-        margin-top: 50px;
+        position: absolute;
+        bottom: 0;
         .margin {
           margin-left: 30px;
+        }
+      }
+      &-img {
+        max-width: 240px;
+        img {
+          width: 100%;
         }
       }
     }

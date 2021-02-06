@@ -1,0 +1,147 @@
+@media only screen and (max-width: 1600px) {
+  .promo {
+    .tns-controls {
+      width: auto;
+      right: 40px;
+      top: 30px;
+      position: absolute;
+      z-index: 999;
+    }
+    [data-controls="next"] {
+      transform: translateX(15px);
+      position: relative;
+    }
+    [data-controls="prev"] {
+      position: relative;
+    }
+  }
+}
+@media only screen and (max-width: 1460px) {
+  .subheader {
+    &__list {
+      a {
+        &:nth-child(1) {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .header {
+    &-info {
+      width: auto;
+      margin-left: 30px;
+      &:nth-child(2) {
+        border: none;
+      }
+    }
+    &__langs {
+      margin-left: 50px;
+    }
+  }
+  .subheader {
+    &__list {
+      a {
+        width: 110px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header {
+    .container {
+      align-items: center;
+    }
+    &__burger.active {
+      z-index: 99999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      div {
+        background-color: #de2627;
+      }
+      .line1 {
+        transform: rotate(45deg);
+        position: absolute;
+      }
+      .line2 {
+        display: none;
+      }
+      .line3 {
+        transform: rotate(-45deg);
+        position: absolute;
+      }
+    }
+    &__blocks {
+      display: none;
+    }
+    &__blocks.active {
+      position: fixed;
+      width: 70vw;
+      height: 100vw;
+      background: #fff;
+      border-left: 2px solid #de2627;
+      top: 0;
+      z-index: 9999;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      .header-info {
+        margin-top: 50px;
+        &:first-child {
+          margin-top: 100px;
+        }
+      }
+      .header__langs {
+        display: none;
+      }
+    }
+  }
+  &-info {
+    &__bold {
+      a {
+        font-size: 15px;
+      }
+    }
+    &__light {
+      span {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.promo {
+  &__slider {
+    &-block {
+      &__text {
+        margin-left: 20px;
+      }
+      &__img {
+        margin-right: 0;
+      }
+    }
+  }
+  .tns-nav {
+    left: 3%;
+  }
+  .tns-controls {
+    right: auto;
+    bottom: 75%;
+    top: auto;
+    bottom: 5%;
+  }
+}
+
+.subheader {
+  &__call {
+    span {
+      font-size: 14px;
+    }
+  }
+}

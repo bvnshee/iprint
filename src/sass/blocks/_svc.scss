@@ -8,15 +8,22 @@
       color: #453c3c;
     }
   }
-  &__list {
+  &__wrapper {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-
+    margin: 0 auto;
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(
+        5,
+        1fr
+      ); /* количество элементов  в строке и их величина */
+      grid-template-rows: repeat(2, 200px); /* величина каждой строки */
+      column-gap: 30px;
+      row-gap: 30px;
+    }
     &-block {
       margin-top: 30px;
       padding: 24px 25px;
-      width: calc(100% / 5 - 30px);
       height: 180px;
       left: 255px;
       top: 676px;

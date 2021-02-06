@@ -1,19 +1,21 @@
 .header {
+  padding: 25px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
   width: 100%;
   height: 100px;
-  padding: 25px 0;
   &__blocks {
+    div {
+      opacity: 0;
+    }
     display: flex;
-    right: 0;
-    position: absolute;
   }
   &__logo {
-    font-size: 50px;
+    font-size: 35px;
     font-weight: bold;
     color: black;
-    position: absolute;
-    left: 0;
-    top: 0;
   }
   &-info {
     width: 300px;
@@ -63,5 +65,109 @@
         margin-top: 0;
       }
     }
+  }
+  &__langs {
+    margin-top: 10px;
+    &__element {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      span {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        color: #de2627;
+      }
+      svg {
+        margin-left: 9px;
+      }
+    }
+    &__list {
+      position: absolute;
+      width: 120px;
+      height: 105px;
+      background-color: #de2627;
+      transform: translateX(-45px);
+      top: 50px;
+      z-index: 9999;
+      display: none;
+      ul {
+        li {
+          text-align: center;
+          padding: 5px 0;
+          font-size: 17px;
+          transition: 0.3s ease-in;
+          color: #fff;
+          border: 1px solid #de2627;
+          font-weight: bold;
+          cursor: pointer;
+          &:hover {
+            background-color: #fff;
+            color: #de2627;
+          }
+        }
+      }
+    }
+    #langSwitch {
+      opacity: 1;
+    }
+    &_active {
+      animation: langSwitcher 0.3s ease-in;
+      .header__langs__list {
+        display: block;
+
+        @keyframes langSwitcher {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+          0% {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+  &__burger {
+    cursor: pointer;
+    margin-right: 20px;
+    width: 40px;
+    height: 30px;
+    div {
+      width: 30px;
+      height: 3px;
+      margin: 5px;
+      background: #000;
+      transition: all 0.5s ease-in;
+    }
+
+    .active .line1 {
+      transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    .active .line2 {
+      opacity: 0;
+    }
+
+    .active .line3 {
+      transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+    @keyframes navLinksFade {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+      }
+    }
+  }
+  .active {
+    right: 0;
   }
 }

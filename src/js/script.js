@@ -56,3 +56,30 @@ function initMap() {
     map: map,
   });
 }
+
+let langSwitchBtn = document.querySelector("#langSwitchBtn");
+let langSwitch = document.querySelector("#langSwitch");
+
+langSwitchBtn.onclick = () =>
+  langSwitch.classList.toggle("header__langs_active");
+
+let navSlide = () => {
+  let burger = document.querySelector(".header__burger");
+  let navMenu = document.querySelector(".header__blocks");
+  let navlinks = document.querySelectorAll(".header__blocks div");
+
+  burger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+
+    navlinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `navLinksFade 0.5s ease forwards 0.1s`;
+      }
+    });
+
+    burger.classList.toggle("active");
+  });
+};
+navSlide();
