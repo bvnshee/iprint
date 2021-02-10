@@ -41,6 +41,10 @@ tabsContent.forEach((el, index) => {
     if (e.target == tabs[index]) {
       el.classList.add("services__inside-item_active");
       tabsWrapper[index].classList.add("services__tabs-item_active");
+
+      if (document.body.clientWidth <= 1199) {
+        serviceBar.classList.remove("active");
+      }
     }
   };
 });
@@ -83,3 +87,10 @@ let navSlide = () => {
   });
 };
 navSlide();
+
+let serviceBurger = document.querySelector(".services__burger");
+let serviceBar = document.querySelector(".services__tabs");
+
+serviceBurger.onclick = () => {
+  serviceBar.classList.toggle("active");
+};

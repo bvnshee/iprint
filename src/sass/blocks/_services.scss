@@ -109,7 +109,7 @@
         justify-content: space-between;
       }
       &__checkbox {
-        max-width: 250px;
+        max-width: 280px;
         h3 {
           font-weight: normal;
           font-size: 20px;
@@ -177,6 +177,7 @@
   &__second {
     margin-top: 170px;
     display: flex;
+    justify-content: space-between;
     &__images {
       display: flex;
       position: relative;
@@ -206,7 +207,7 @@
       }
     }
     &__questions {
-      margin-left: 185px;
+      max-width: 420px;
       h3 {
         font-weight: bold;
         font-size: 30px;
@@ -224,7 +225,7 @@
     &__inputs {
       margin-top: 53px;
       input {
-        width: 420px;
+        width: 100%;
         height: 50px;
         background: #f2f3f5;
         border-radius: 6px;
@@ -246,7 +247,7 @@
       }
     }
     button {
-      width: 420px;
+      width: 100%;
       height: 50px;
       background: #de2627;
       border-radius: 6px;
@@ -259,6 +260,27 @@
       box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
       outline: none;
       cursor: pointer;
+    }
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__burger {
+    display: none;
+    cursor: pointer;
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 88px;
+    div {
+      width: 30px;
+      height: 3px;
+      margin: 5px;
+      background: #000;
+      transition: all 0.5s ease-in;
     }
   }
 }

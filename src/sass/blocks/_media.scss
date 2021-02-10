@@ -15,6 +15,11 @@
       position: relative;
     }
   }
+  .about {
+    .container {
+      padding: 0 10px;
+    }
+  }
 }
 @media only screen and (max-width: 1460px) {
   .subheader {
@@ -24,6 +29,125 @@
           margin-left: 20px;
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .header {
+    .container {
+      padding: 0 10px;
+    }
+  }
+  .services {
+    &__title {
+      font-size: 17px;
+    }
+    .container {
+      padding: 0 10px;
+    }
+    &__burger {
+      display: block;
+    }
+    &__burger.active {
+      .line1 {
+        transform: rotate(45deg);
+        position: absolute;
+      }
+      .line2 {
+        display: none;
+      }
+      .line3 {
+        transform: rotate(-45deg);
+        position: absolute;
+      }
+    }
+    &__title {
+      text-align: center;
+    }
+    &__second {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &__questions {
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 420px;
+        margin-left: 0;
+      }
+    }
+    &__tabs {
+      display: none;
+      overflow-y: scroll;
+    }
+    &__tabs.active {
+      display: block;
+      position: fixed;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      z-index: 999999;
+      margin-top: 0;
+      animation: swipe 0.3s ease-in;
+      @keyframes swipe {
+        0% {
+          left: -100%;
+        }
+        100% {
+          right: 0;
+        }
+      }
+    }
+    &__inside {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-left: 0;
+      &-item {
+        align-items: center;
+        text-align: center;
+        max-width: 800px;
+        &__text {
+          align-items: center;
+          h3 {
+            font-size: 25px;
+          }
+          span {
+            max-width: 600px;
+          }
+        }
+        &__images {
+          position: relative;
+          margin-top: 50px;
+        }
+        &-img {
+          .margin {
+            margin-left: 0;
+          }
+        }
+        &__checkbox {
+          display: none;
+        }
+        &__content {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .footer {
+    .container {
+      padding: 0 20px;
+    }
+  }
+  .developers {
+    .container {
+      padding: 0 20px;
     }
   }
 }
@@ -48,10 +172,29 @@
       }
     }
   }
+  .about {
+    &__title {
+      text-align: center;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__img {
+        min-width: auto;
+      }
+      &__text {
+        margin-top: 50px;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
   .header {
+    &__burger {
+      display: block;
+    }
     .container {
       align-items: center;
     }
@@ -62,6 +205,7 @@
       justify-content: center;
       align-items: center;
       position: fixed;
+      margin-right: 10px;
       div {
         background-color: #de2627;
       }
@@ -76,6 +220,15 @@
         transform: rotate(-45deg);
         position: absolute;
       }
+      animation: opacity 0.5s ease-in;
+      @keyframes opacity {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 100%;
+        }
+      }
     }
     &__blocks {
       display: none;
@@ -83,7 +236,7 @@
     &__blocks.active {
       position: fixed;
       width: 70vw;
-      height: 100vw;
+      height: 100vh;
       background: #fff;
       border-left: 2px solid #de2627;
       top: 0;
@@ -100,6 +253,16 @@
       .header__langs {
         display: none;
       }
+      animation: slide 0.2s ease-in;
+
+      @keyframes slide {
+        0% {
+          right: -100%;
+        }
+        100% {
+          right: 0;
+        }
+      }
     }
   }
   &-info {
@@ -114,27 +277,95 @@
       }
     }
   }
-}
-
-.promo {
-  &__slider {
-    &-block {
-      &__text {
-        margin-left: 20px;
+  .promo {
+    &__slider {
+      &-block {
+        &__text {
+          margin-top: 20px;
+          margin-left: 20px;
+        }
+        &__img {
+          margin-right: 0;
+        }
       }
-      &__img {
-        margin-right: 0;
+    }
+    .tns-nav {
+      left: 3%;
+    }
+    .tns-controls {
+      right: auto;
+      top: auto;
+      bottom: 5%;
+    }
+  }
+  .subheader {
+    overflow-x: scroll;
+    &__call {
+      display: none;
+    }
+  }
+  .services {
+    &__second {
+      margin-top: 50px;
+      &__images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      &-block {
+        margin-top: 20px;
+        &:nth-child(1) {
+          min-width: auto;
+        }
+        &:nth-child(2) {
+          position: relative;
+          min-width: auto;
+
+          left: 0;
+          top: 0;
+        }
+        &:nth-child(3) {
+          min-width: auto;
+
+          margin-top: 0;
+          margin-left: 0;
+        }
       }
     }
   }
-  .tns-nav {
-    left: 3%;
+  .footer {
+    height: auto;
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__social {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      &__contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+      iframe {
+        margin-top: 50px;
+      }
+    }
   }
-  .tns-controls {
-    right: auto;
-    bottom: 75%;
-    top: auto;
-    bottom: 5%;
+  .developers {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__second {
+      margin-top: 10px;
+    }
   }
 }
 
@@ -142,6 +373,38 @@
   &__call {
     span {
       font-size: 14px;
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .promo {
+    .container {
+      height: 100%;
+      padding: 0 20px;
+    }
+    &__slider {
+      &-block {
+        &__img {
+          display: none;
+        }
+        &__text {
+          text-align: center;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          margin-top: 100px;
+          margin-left: 0;
+        }
+      }
+    }
+    .tns-nav {
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+      left: 40%;
+      top: 5%;
     }
   }
 }
